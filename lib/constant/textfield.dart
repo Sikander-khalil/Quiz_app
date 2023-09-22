@@ -7,11 +7,13 @@ Widget normalText({
 })
 
 {
-  return Text(
+  return Center(
+    child: Text(
 
-    text!,
+      text!,
 
-    style: TextStyle(color: color, fontSize: size),
+      style: TextStyle(color: color, fontSize: size),
+    ),
   );
 }
 
@@ -21,10 +23,12 @@ Widget headingText({
 })
 
 {
-  return Text(
+  return Center(
+    child: Text(
 
-    text!,
+      text!,
 
-    style: TextStyle(color: color, fontSize: size),
+      style: TextStyle(color: color, fontSize: size),
+    ),
   );
 }

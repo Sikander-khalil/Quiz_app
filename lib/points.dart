@@ -34,11 +34,12 @@ class PointsScreen extends StatelessWidget {
       ),
       body: Center(
         child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
           scrollDirection: Axis.vertical,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset(balloon, width: 400, height: 400,),
+              Image.asset(reward, width: 400, height: 400,),
               Text(
                 'Total Correct Answers: $correctAnswers',
                 style: TextStyle(fontSize: 24),
@@ -53,7 +54,7 @@ class PointsScreen extends StatelessWidget {
               ),
 
               Text(
-                'Total Points: $totalPoints',
+                'Total Questions: ${correctAnswers + wrongAnswers}',
                 style: TextStyle(fontSize: 24),
               ),
 
@@ -63,6 +64,8 @@ class PointsScreen extends StatelessWidget {
               ),
               ListView.builder(
                 shrinkWrap: true,
+                physics: BouncingScrollPhysics(),
+
 
                 itemCount: likedQuestions.length,
                 itemBuilder: (context, index) {

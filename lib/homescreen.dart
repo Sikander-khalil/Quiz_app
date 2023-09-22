@@ -26,11 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
           height: double.infinity,
           padding: EdgeInsets.all(12),
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [blue, darkBlue],
-            ),
+           color: Colors.black
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,23 +44,27 @@ class _HomeScreenState extends State<HomeScreen> {
               //         size: 28,
               //       )),
               // ),
-              Image.asset(
-                balloon2,
+              Center(
+                child: Image.asset(
+                  quiz,
+                  width: 300,
+                  height: 300,
+                ),
               ),
               SizedBox(
                 height: 20,
               ),
-              normalText(text: "Welcome to Our", color: lightgrey, size: 18),
-              headingText(text: "Quiz", color: lightgrey, size: 32),
+              normalText(text: "Welcome to Our", color: Colors.white, size: 18),
+              headingText(text: "Quiz", color: Colors.white, size: 32),
               SizedBox(
                 height: 20,
               ),
               normalText(
-                  color: lightgrey,
+                  color: Colors.white,
                   size: 16,
                   text:
                       "Do you feel confident? How you will face our most difficult questions"),
-              const Spacer(),
+SizedBox(height: 70,),
 
               InkWell(
 
@@ -79,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     margin: EdgeInsets.only(bottom: 20),
                     alignment: Alignment.center,
 
-                    width: size.width,
+                    width: size.width - 100,
                     padding: EdgeInsets.all(16),
                     decoration: BoxDecoration(
                       color: Colors.white,
